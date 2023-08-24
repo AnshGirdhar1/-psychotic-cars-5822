@@ -37,7 +37,7 @@ function SignupModal() {
       age,
     };
 
-    await fetch("https://bitrix24-backend.herokuapp.com/signup", {
+    await fetch("https://bitrix-24-website-clone.onrender.com/signup", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -90,6 +90,8 @@ function SignupModal() {
             <FormControl>
               <FormLabel>name</FormLabel>
               <Input
+            required
+            type ="text"
                 value={name}
                 onChange={(e) => setname(e.target.value)}
                 ref={initialRef}
@@ -99,6 +101,8 @@ function SignupModal() {
             <FormControl>
               <FormLabel>Email</FormLabel>
               <Input
+            required
+            type = "email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 ref={initialRef}
@@ -109,6 +113,8 @@ function SignupModal() {
             <FormControl mt={4}>
               <FormLabel>Password</FormLabel>
               <Input
+            required
+            type = "password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="enter password"
@@ -118,6 +124,8 @@ function SignupModal() {
             <FormControl mt={4}>
               <FormLabel>Age</FormLabel>
               <Input
+            required
+            type = "number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 placeholder="enter Age"

@@ -5,7 +5,7 @@ const login = (payload) => (dispatch) => {
   dispatch({ type: types.LOGIN_REQUEST });
   return axios({
     method: "post",
-    url: "https://bitrix24-backend.herokuapp.com/login",
+    url: "https://bitrix-24-website-clone.onrender.com/login",
     data: payload,
   })
     .then((r) => {
