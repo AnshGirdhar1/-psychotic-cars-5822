@@ -17,7 +17,7 @@ export const getTeamMembers = (token) => async (dispatch) => {
   try {
     const res = await axios({
       method: "GET",
-      url: "https://bitrix24-backend.herokuapp.com/groups/getGroups",
+      url: "https://bitrix-24-website-clone.onrender.com/groups/getGroups",
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -48,7 +48,7 @@ export const addTeamMembers = (token, formData) => async (dispatch) => {
   try {
     await axios({
       method: "POST",
-      url: "https://bitrix24-backend.herokuapp.com/groups/create",
+      url: "https://bitrix-24-website-clone.onrender.com/groups/create",
       data: formData,
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -75,7 +75,7 @@ export const deleteTeamMembers = (token, id) => async (dispatch) => {
   try {
     await axios({
       method: "DELETE",
-      url: `https://bitrix24-backend.herokuapp.com/groups/delete/${id}`,
+      url: `https://bitrix-24-website-clone.onrender.com/groups/delete/${id}`,
       headers: { Authorization: `Bearer ${token}` },
     });
     dispatch(getTeamMembers(token));

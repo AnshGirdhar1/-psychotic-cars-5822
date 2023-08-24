@@ -28,12 +28,12 @@ const Calendar = () => {
 
   async function handleEventAdd(data) {
     console.log(data);
-    await axios.post("https://bitrix24-backend.herokuapp.com/event/create", data.event);
+    await axios.post("https://bitrix-24-website-clone.onrender.com/event/create", data.event);
   }
 
   async function handleDateSet(data) {
     const response = await axios.get(
-      "https://bitrix24-backend.herokuapp.com/event/?start=" +
+      "https://bitrix-24-website-clone.onrender.com/?start=" +
         moment(data.start).toISOString() +
         "&end=" +
         moment(data.end).toISOString()
